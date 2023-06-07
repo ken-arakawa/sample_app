@@ -68,11 +68,11 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   config.action_mailer.raise_delivery_errors = true
   config.aciton_mailer.delivery_method = :smtp
-  host = 'https://railstutorial-sample-app-u8vo.onrender.com'
+  host = 'railstutorial-sample-app-u8vo.onrender.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
-    :port           => 587
-    :address        =>'smtp.mailgun.org'
+    :port           => 587,
+    :address        =>'smtp.mailgun.org',
     :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
     :password       => ENV['MAILGUN_SMTP_PASSWORD'],
     :domain         => host,
